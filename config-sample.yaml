@@ -1,0 +1,37 @@
+# config-sample.yaml
+---
+source:
+    first_db:
+        database:
+            server: 192.168.1.100
+            user: user1
+            password: password1_in_base64
+            database: database1
+            driver: mssql
+            logmode: false
+            test-on-boot: true
+        tables:
+            - table1
+            - table2
+
+    second_db:
+        database:
+            server: 192.168.1.101
+            user: user2
+            password: password2_in_base64
+            database: database2
+            driver: mssql
+            logmode: false
+            test-on-boot: true
+        tables:
+            - table3
+            - table4
+
+destination:
+    server: 127.0.0.1:3306
+    user: dbuser
+    password: password_in_base64
+    database: database_name
+    driver: mysql
+    logmode: false
+    test-on-boot: true
